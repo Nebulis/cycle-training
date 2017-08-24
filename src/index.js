@@ -1,22 +1,30 @@
 import {run} from '@cycle/run'
 import {makeDOMDriver, div, h3, i} from '@cycle/dom'
 import {makeHTTPDriver} from '@cycle/http'
+import isolate from '@cycle/isolate';
 import xs from 'xstream'
 import delay from 'xstream/extra/delay'
 
+// TODO 1 view
+// TODO 2 intent
+// TODO 3 model
+
 function Training(sources) {
+  // TODO 2 intent
   const props$ = sources.props
   const favorite$ = sources.DOM
     .select('.favorite')
     .events('click')
-    .fold(acc => !acc)
+    .fold(acc => !acc, false)
 
+  // TODO 3 model
   const state$ = xs.combine(props$, favorite$)
     .map( ([props, favorite]) => ({
       ...props,
       favorite,
     }))
 
+  // TODO 1 view
   const vdom$ = state$.map(training =>
     div(`.training.card.border-info`, [
       div('.card-header.text-center', [
@@ -35,15 +43,8 @@ function Training(sources) {
 
 
 function displayTrainings(trainings, sources) {
-  const view = [];
-  const { isolateSource, isolateSink} = sources.DOM;
-  for (const t of trainings) {
-    const id = `training-${t.id}`
-    const training = Training({ DOM: isolateSource(sources.DOM, id), props: xs.of(t) })
-    view.push(isolateSink(training.DOM, id))
-  }
   return xs
-    .combine(...view)
+    .combine(...trainings.map(t => isolate(Training)({ DOM: sources.DOM, props: xs.of(t) }).DOM))
     .map(trainings => div('#training-container', trainings));
 }
 
