@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "cycle-scripts": "1.1.0"
   },
   "dependencies": {
     "@cycle/dom": "^18.1.0",
     "@cycle/run": "^3.2.0",
+    "@cycle/isolate": "^3.1.0",
     "xstream": "^10.9.0"
   },
   "scripts": {
@@ -19,6 +21,7 @@
   "babel": {
     "presets": [
       "es2015"
-    ]
+    ],
+    "plugins": ["transform-object-rest-spread"]
   }
 }
