@@ -1,26 +1,48 @@
 import {run} from '@cycle/run'
-import {makeDOMDriver, div} from '@cycle/dom'
+import {makeDOMDriver, div, h3, i} from '@cycle/dom'
 import {makeHTTPDriver} from '@cycle/http'
 import xs from 'xstream'
 import delay from 'xstream/extra/delay'
 
+function displayTrainings(trainings) {
+  const view = [];
+  for (const t of trainings) {
+    view.push(div(`.training.card.border-info`, [
+      div('.card-header.text-center', [
+        h3('.training-title.card-title', t.title),
+        i('.fa.fa-heart.favorite'),
+      ]),
+      div('.card-body', [
+        div('.training-description.card-text', t.description)
+      ]),
+    ]))
+  }
+  return div('#training-container', view);
+}
+
 function main (sources) {
-  // TODO 1 create request to /training.json
+  const request$ = xs.of({
+    url: '/training.json', // GET method by default
+    category: 'training',
+  });
 
-  // TODO 3 listen for HTTP response (don't forget flatten at the end)
+  const response$ = sources.HTTP
+    .select('training')
+    .flatten();
 
-  // TODO 4 display the numbers of elements
-  // TODO 5 add delay
-  const vdom$ = xs.of(div('Hello World'))
+  const vdom$ = response$
+    .map(res => res.body)
+    .map(displayTrainings)
 
   return {
     DOM: vdom$,
+    HTTP: request$,
   }
 }
 
-// TODO 2 create HTTP driver
 const drivers = {
   DOM: makeDOMDriver('#app'),
+  HTTP: makeHTTPDriver(),
 }
 
 run(main, drivers)
