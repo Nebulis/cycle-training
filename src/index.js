@@ -1,14 +1,17 @@
 import {run} from '@cycle/run'
 import {makeDOMDriver, div} from '@cycle/dom'
+import xs from 'xstream'
 
 function main () {
-  // TODO 1 Display Hello World
+  const vdom$ = xs.of(div('Hello World'))
 
-  // TODO 2 Return sinks
+  return {
+    DOM: vdom$,
+  }
 }
 
 const drivers = {
-  // TODO 3 create DOM Driver
+  DOM: makeDOMDriver('#app'),
 }
 
 run(main, drivers)
