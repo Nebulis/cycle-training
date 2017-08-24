@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "title": "Core Spring",
+    "description": "In partnership with Pivotal, Zenika welcomes you to join the official Core Spring Training conducted by a certified Spring consultant. Contact us for more information."
+  },
+  {
+    "id": 2,
+    "title": "Enterprise Spring",
+    "description": "In partnership with Pivotal, Zenika welcomes you to join the officiel  Enterprise Spring Training conducted by a certified Spring consultant. Contact us for more information."
+  },
+  {
+    "id": 3,
+    "title": "Cloud Foundry developer",
+    "description": "This training aims to explain the concepts of Cloud Foundry, an open-source PAAS solution supported by Pivotal. This solution, available in the cloud or “on-premises”, is a rational alternative to common needs (high availability, TimeToMarket, replication, hot deployment) and provides services that must be reviewed for an optimal use. The idea is to discover the development of modern applications with Cloud Foundry but also to deploy and host these applications in a simple, robust and scalable way."
+  },
+  {
+    "id": 4,
+    "title": "Test Drive Development",
+    "description": "Test Driven Development is a popular methodology that promotes code quality and allows safe refactoring of the legacy code. Our course mostly focuses on labs (70% of the course). It will allow you to understand the TDD best practices and try out the most popular tools used with TDD."
+  },
+  {
+    "id": 5,
+    "title": "JPA with Hibernate",
+    "description": "Hibernate is the most famous ORM (Object Relational Mapping) in Java. This course teaches how to write a persistent layer using Hibernate and the JPA API. This training focuses on new JPA 2.1 and Hibernate 5 concepts. It explains best practices to access a relational database in a performant and maintainable way."
+  },
+  {
+    "id": 6,
+    "title": "Introduction to Docker",
+    "description": "This 2-days official training is an introduction to the Docker platform. It guides you to install, integrate and manage Docker in your infrastructure. It is intended for developers and administrators (junior or experienced) who wish to understand the benefits to develop and run applications using Docker."
+  },
+  {
+    "id": 7,
+    "title": "Advanced Docker Operations",
+    "description": "This 2-days official training is designed for developers and administrators (junior or experienced) who want to understand how to control the Docker daemon and how to manage security as well as master concepts around Docker Machine, Swarm and Compose."
+  },
+  {
+    "id": 8,
+    "title": "Docker Administrations and Operations",
+    "description": "This official training corresponds to the full Docker training course: Getting started followed by the advanced Docker training. It takes place over 4 consecutive days and is intended for developers and administrators (junior or experienced) who wish to understand the administration and the orchestration of Docker and its ecosystem, from the bases to the more complex subjects."
+  },
+  {
+    "id": 9,
+    "title": "Introduction to Jenkins",
+    "description": "The CloudBees Jenkins platform is at the heart of integration and continuous delivery chains. The mastery of this tool is an essential element for its daily use by the development and ops teams."
+  },
+  {
+    "id": 10,
+    "title": "CloudBees Jenkins Platform – Admin Training",
+    "description": "The CloudBees Jenkins platform is at the heart of integration and continuous delivery chains. The administration of this tool is an essential element to ensure the daily production by the development and ops teams."
+  },
+  {
+    "id": 11,
+    "title": "Javascript",
+    "description": "In the past few years, the JavaScript language has become an essential tool for developers both on the client side (AngularJS, ReactJS…) and on the server side (Node.JS).Our “Javascript for Beginners” course is suitable for Web developers and for backend developers who need to acquire a solid JavaScript foundation."
+  },
+  {
+    "id": 12,
+    "title": "Typescript",
+    "description": "Typescript is a programming language created by Microsoft. It comes as a superset of the Javascript language and adds features which are not yet available in Javascript.Typescript is the language that has been used internally to develop the Angular framework."
+  },
+  {
+    "id": 13,
+    "title": "React JS",
+    "description": "React is a Javascript library that was created by the Facebook and Instagram developer teams. Their goal was to solve some issues in performance, productivity, and maintainability with their existing Javascript applications.React has now become a powerful and popular framework among JS developers."
+  },
+  {
+    "id": 14,
+    "title": "Angular",
+    "description": "Angular is the vastly popular framework written by Google. It used to be called AngularJS (in version 1) and has been renamed into Angular starting from version 2. Angular brings new functionalities to the table, it helps engineers to design and develop faster and sturdier applications."
+  },
+  {
+    "id": 15,
+    "title": "Kotlin",
+    "description": "Kotlin is the programming language created by JetBrains in 2011. It can be compiled to Java bytecode for the JVM, transpiled to JavaScript and more with the LLVM Compiler. The language goals are to be compatible with existing codebases, to leverage functional programming easily, to simplify code writing and to free developers from the burden of common mistake."
+  },
+  {
+    "id": 16,
+    "title": "Elasticsearch for Developers Training",
+    "description": "Elasticsearch is an opensource search engine based on Lucene. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface."
+  },
+  {
+    "id": 17,
+    "title": "Elasticsearch Operations",
+    "description": "Our Elasticsearch Operations course  will allow you to acquire good working knowledge with the core and advanced features of managing Elasticsearch. You will learn how to setup Elasticsearch, execute basic queries, perform optimisations and routine operations and setup/monitor a cluster."
+  },
+  {
+    "id": 18,
+    "title": "Kafka: Confluent developer",
+    "description": "In this three-day, hands-on Apache Kafka developer training course, you will learn how to build an application that can publish data to, and subscribe data from, a Kafka cluster. You will learn the role of Kafka in the modern data distribution pipeline, discuss core Kafka architectural concepts and components, and review the Kafka developer APIs. The course also covers other components in the broader Confluent Platform such as Kafka Connect and Kafka Streams."
+  },
+  {
+    "id": 19,
+    "title": "Git",
+    "description": "Git is one of the most popular Distributed Version Control Systems (DVCS)."
+  }
+]

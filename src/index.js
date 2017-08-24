@@ -1,11 +1,17 @@
 import {run} from '@cycle/run'
-import {makeDOMDriver} from '@cycle/dom'
-import {App} from './app'
+import {makeDOMDriver, div, h1} from '@cycle/dom'
+import xs from 'xstream';
 
-const main = App
+function main () {
+  // TODO 1 Display Hello World
 
-const drivers = {
-  DOM: makeDOMDriver('#app')
+  // TODO 2 Return sinks
 }
+
+// TODO 3 create DOM Driver
+const drivers = {
+}
+// TODO 4 test with different key
+// TODO 5 test with different element
 
 run(main, drivers)

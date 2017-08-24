@@ -1,0 +1,22 @@
+#training-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    background-color: #fff;
+    color: #444;
+    padding: 10px;
+}
+
+.training {
+    border: 1px solid green;
+}
+
+.favorite {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.favorite:hover {
+    cursor:pointer;
+}
