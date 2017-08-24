@@ -1,11 +1,14 @@
 import {run} from '@cycle/run'
-import {makeDOMDriver} from '@cycle/dom'
-import {App} from './app'
+import {makeDOMDriver, div} from '@cycle/dom'
 
-const main = App
+function main () {
+  // TODO 1 Display Hello World
+
+  // TODO 2 Return sinks
+}
 
 const drivers = {
-  DOM: makeDOMDriver('#app')
+  // TODO 3 create DOM Driver
 }
 
 run(main, drivers)
