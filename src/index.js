@@ -4,8 +4,19 @@ import {makeHTTPDriver} from '@cycle/http'
 import xs from 'xstream'
 import delay from 'xstream/extra/delay'
 
-function displayTrainings(trainings) {
+// TODO 1 Create Training component
+// TODO 2 Add sources and use props as value
+// TODO 3 Reactive Element => xs.of
+// TODO 4 Use sinks
+// TODO 5 Listen for DOM click on .favorite and dont forget startWith
+// TODO 6 Use props as stream
+
+
+// TODO 2 Add sources and use props as value
+// TODO 6 Use props as stream
+function displayTrainings(trainings, sources) {
   const view = [];
+  // TODO 7 isolation
   for (const t of trainings) {
     view.push(div(`.training.card.border-info`, [
       div('.card-header.text-center', [
@@ -30,6 +41,8 @@ function main (sources) {
     .select('training')
     .flatten();
 
+  // TODO 2 Add sources
+  // TODO 3 Reactive Element => flatten
   const vdom$ = response$
     .map(res => res.body)
     .map(displayTrainings)
